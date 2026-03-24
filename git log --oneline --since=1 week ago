@@ -1,0 +1,51 @@
+[33mcommit 96794647b0753ed18c37de110b60f46354a170f6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Umair K <umair.khan7@education.nsw.gov.au>
+Date:   Mon Feb 23 11:55:15 2026 +1100
+
+    Game Finished
+
+[33mcommit e43fd2f64e1f366efd3cad7303c29895c6599a80[m
+Author: Umair K <umair.khan7@education.nsw.gov.au>
+Date:   Thu Feb 19 09:39:30 2026 +1100
+
+    WIP: Adding Obstactles onto Ground
+
+[33mcommit 3aaa82da770147cc0b44a314da22a6b5dcb9d204[m
+Author: Umair K <umair.khan7@education.nsw.gov.au>
+Date:   Mon Feb 16 09:40:07 2026 +1100
+
+    WIP: Adding Obstacles
+
+[33mcommit 9f3ece874cddb6590a1d41ab4a4b7dbd0dc6f4f9[m
+Author: Umair K <umair.khan7@education.nsw.gov.au>
+Date:   Thu Feb 12 11:55:22 2026 +1100
+
+    WIP: Adding the score text to my game.
+
+[33mcommit 1428f74d93a64cef2afed66cfb33f288dc02a460[m
+Author: Umair K <umair.khan7@education.nsw.gov.au>
+Date:   Wed Feb 11 10:32:32 2026 +1100
+
+    WIP: Finished placing collectibles on ground
+    
+    WIP: The ball is moving on a ground with borders, collectibles are placed on the ground but aren't able to be collected yet. Developing the collection function currently.
+
+[33mcommit 5672275264f40954da5615bf23edd3b5ad54db80[m
+Author: Umair K <umair.khan7@education.nsw.gov.au>
+Date:   Mon Feb 9 11:54:29 2026 +1100
+
+    WIP; Ball Movement
+    
+    Creating script
+
+[33mcommit e0a6243428a9d017a7cb50fec7b97d593b96011f[m
+Author: Umair K <umair.khan7@education.nsw.gov.au>
+Date:   Thu Feb 5 09:37:29 2026 +1100
+
+    1st Lesson
+
+[33mcommit 375ab85d3685d15835248b6a74913a472ea0a1ca[m
+Author: Umair K <umair.khan7@education.nsw.gov.au>
+Date:   Mon Feb 2 09:31:14 2026 +1100
+
+    Initial commit
