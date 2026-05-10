@@ -22,14 +22,7 @@ public class PlayerController : MonoBehaviour
         winTextObject.SetActive(false);
     }
 
- void OnMove (InputValue movementValue)
-   {
-      Vector2 movementVector = movementValue.Get<Vector2>();
-    
-       movementX = movementVector.x;
-       movementY = movementVector.y; 
-  
-   }
+ 
 
    void SetCountText()
    {
@@ -71,5 +64,19 @@ public class PlayerController : MonoBehaviour
             SetCountText();
         }
         
+    }
+
+    void Update()
+    {
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+        Vector3 camForward = Camera.main.transform.forward;
+        Vector3 camRight = Camera.main.transform.right;
+        camForward.y = 0f; 
+        camRight.y = 0f;
+        camForward.Normalize();
+        camRight.Normalize();
+        Vector3 moveDirection = (camForward * vertical) + (camRight * horizontal);
+        transform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
     }
 }

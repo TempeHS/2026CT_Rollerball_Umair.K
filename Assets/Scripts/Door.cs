@@ -9,16 +9,14 @@ public class Door : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        initialPosition = new Vector3(0, 2, -16);
-
+        initialPosition = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float newY = Mathf.Sin(Time.time * speed);
-
-        transform.position = new Vector3(initialPosition.x, newY, initialPosition.z) * height;
+        float newY = initialPosition.y + Mathf.Sin(Time.time * speed) * height;
+        transform.position = new Vector3(initialPosition.x, newY, initialPosition.z);
     }
 
     public void ResetPosition()
