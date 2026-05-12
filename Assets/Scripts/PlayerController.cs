@@ -21,16 +21,7 @@ public class PlayerController : MonoBehaviour
         SetCountText();
         winTextObject.SetActive(false);
     }
-
- void OnMove (InputValue movementValue)
-   {
-      Vector2 movementVector = movementValue.Get<Vector2>();
     
-       movementX = movementVector.x;
-       movementY = movementVector.y; 
-  
-   }
-
    void SetCountText()
    {
       countText.text = "Count: " + count.ToString();
@@ -42,13 +33,7 @@ public class PlayerController : MonoBehaviour
    }
 
 
-    void FixedUpdate()
-    {
-
-      Vector3 movement = new Vector3(movementX, 0.0f, movementY);
-
-      rb.AddForce(movement * speed);
-    }
+   
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -71,5 +56,19 @@ public class PlayerController : MonoBehaviour
             SetCountText();
         }
         
+    }
+
+    void Update()
+    {
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+        Vector3 camForward = Camera.main.transform.forward;
+        Vector3 camRight = Camera.main.transform.right;
+        camForward.y = 0f; 
+        camRight.y = 0f;
+        camForward.Normalize();
+        camRight.Normalize();
+        Vector3 moveDirection = (camForward * vertical) + (camRight * horizontal);
+        transform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
     }
 }
